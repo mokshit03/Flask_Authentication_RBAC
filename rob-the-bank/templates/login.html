@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/stylebase.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>LOGIN</h1>
+        <p><i>Hey! You can login with us here.</i></p>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages-{{category}}">
+            {% for category, message in messages %}
+            <p class="flash-messages-{{category}}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <br></br>
+            <button type="submit">LOGIN</button>
+            <br></br>
+            <p>Don't have an account? <a href="/" style="color: #007bff; text-decoration: none;">Register</a></p>
+        </form>
+    </div> 
+</body>
+</html>

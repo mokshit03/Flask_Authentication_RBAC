@@ -1,0 +1,8 @@
+services:
+  rob-the-bank:
+    build:
+      context: ./rob-the-bank
+      dockerfile: Dockerfile
+    image: "rob-the-bank:challenge"
+    ports:
+      - "3000:3000"

@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image:url('bank.jpg'); 
+    background-size: 1300px 600px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container {
+    background: rgba(101, 98, 118, 0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    align-self: center;
+    width: 370px;
+}
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family:'sans-serif';
+}
+p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #a38465;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background-color: #ac9c8b;
+}
+.redirect-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.flash-messages-danger{
+    margin: 7px auto;
+    padding: 1px;
+    max-width: 400px;
+    background-color: #f8d7da;
+    color: #a62c36;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+.flash-messages-success{
+    margin: 7px auto;
+    padding: 1px;
+    max-width: 400px;
+    background-color:  #9cb19a;
+    color: #225412;
+    border-radius: 5px;
+    text-align: center;
+}

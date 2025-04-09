@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/stylebase.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>GET REGISTERED</h1>
+        <p><i>Hey! We welcome you to register with the Richest Bank of the century.</i></p>
+        
+        <!-- Flash messages section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <p class="flash-messages-{{category}}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        <form action="/" method="POST">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="nickname" placeholder="Your nick-name!" required>
+            <br></br>
+            <button type="submit">REGISTER</button>
+            <p>Already have an account? <a href="/login" style="color: #007bff; text-decoration: none;">Login</a></p>
+        </form>
+        <p><i>Note - You will be redirected to login.<i></p>
+    </div> 
+</body>
+</html>

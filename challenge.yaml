@@ -1,0 +1,43 @@
+title: Web Challenge
+author: uschallengedevelopers@deloitte.com
+description: 'Starter web application with a simple challenge (easy)'
+public_description: >
+
+    <div class="challtext">
+
+    <h1> Rob The Bank </h1>
+
+    <p>In the beautiful city of Birmingham, inside one of the largest banks of the world.</p>
+    <p>Big buildings with money in every brick!</p>
+    <p>Recently, this new branch has been established in the city.</p>
+    <p>Officials are not very happy with the security of the new branch.</p>
+    
+    <p>From the city of Birmingham, A rich mafia named Mr.Thomsa Shealby got into a political and business trouble.</p>
+    <p>The higher authorities are planning to freeze all his standings with the bank.</p>
+    <p>He is serious, a good man, Tommy, loves his people and has good connections in the bank.</p>
+    <p>The bank sent a note to tommy to inform him about the freeze & trusting him to hack the account to get his moeny.</p>
+    <p>This must be done very secretly - Bank didn't reveal anything except the details of a secret website</p>
+
+    <p>Mr. Thomas Shealby has a old friendship with you - He is ready to give you good amount for the job.</p>
+    <p>Rob the bank and get Tommy's money?</p>
+    <p>Tommy - It's good business mate, let's finish this!</p>
+    </div>
+
+category: web
+tags: "easy"
+
+flags:
+  - tags: [web/generic]
+    title: 'Hidden flag'
+    unique_id: rob-the-bank_challenge
+    description: 'Help to rob the freezed amount from the bank account of Mr. Thomas Shealby.'
+    points: 50
+    value: CTF{$1 Billion_is_transferred_to_Tommy}
+
+systems:
+- type: docker
+  image: rob-the-bank
+  networks:
+  - {net: access}
+  exposed:
+  - {port: 3000, type: web}
